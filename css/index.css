@@ -1,0 +1,75 @@
+.card-content {
+    padding: 16px;
+}
+
+.theme-dark {
+    --mdc-theme-primary: #000000;
+    --mdc-theme-on-primary: #FFFFFF;
+    --mdc-theme-secondary: #FF0000;
+    /*--mdc-theme-on-secondary: #5E97F6;*/
+    color: #FFFFFF;
+    background-color: var(--mdc-theme-primary);
+    --background-col-lin: #000000;
+    --accent: #FD5B78
+}
+
+
+.theme-light {
+    --mdc-theme-primary: #FFFFFF;
+    --mdc-theme-on-primary: #000000;
+    --mdc-theme-secondary: #FF0000;
+    /*--mdc-theme-on-secondary: #5E97F6;*/
+    color: #000000;
+    background-color: var(--mdc-theme-primary);
+    --background-col-lin: #FFFFFF;
+    --accent: #5E97F6
+}
+
+svg {
+    color: var(--mdc-theme-on-secondary);
+}
+
+.mdc-linear-progress {
+    --mdc-theme-primary: var(--accent);
+}
+
+.mdc-linear-progress__buffer {
+    background-color: var(--background-col-lin);
+}
+
+.mdc-card {
+    margin: 8px;
+    width: 250px;
+    height: 220px;
+}
+
+.mdc-linear-progress {
+    width: 75vw
+}
+
+.skill-entry-achievement .mdc-linear-progress {
+    width: 82.5vw
+}
+
+.skill-title {
+    display: inline;
+}
+
+.skill-entry {
+    padding-top: 16px;
+}
+/*FAB-THEME*/
+.fab-theme {
+    --mdc-theme-secondary: var(--mdc-theme-primary);
+    --mdc-theme-on-secondary: var(--accent)
+}
+
+.mdc-fab {
+    margin: 8px;
+}
+
+/**/
+
+.invisible {
+    visibility: hidden;
+}
