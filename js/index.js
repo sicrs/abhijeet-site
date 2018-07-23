@@ -56,8 +56,6 @@ function loadMDC() {
         mdc.ripple.MDCRipple.attachTo(fab);
     };
 
-    
-    
     mdc.autoInit();
 }
 

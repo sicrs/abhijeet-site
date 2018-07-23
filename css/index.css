@@ -2,6 +2,16 @@
     padding: 16px;
 }
 
+a {
+    text-decoration: underline;
+    color: var(--mdc-theme-on-primary);
+    font-weight: 300;
+}
+
+.section-title {
+    font-size: 16px;
+}
+
 .theme-dark {
     --mdc-theme-primary: #000000;
     --mdc-theme-on-primary: #FFFFFF;
@@ -10,7 +20,7 @@
     color: #FFFFFF;
     background-color: var(--mdc-theme-primary);
     --background-col-lin: #000000;
-    --accent: #FD5B78
+    --accent: #FD5B78;
 }
 
 
