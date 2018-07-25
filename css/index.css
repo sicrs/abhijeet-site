@@ -1,5 +1,5 @@
-.card-content {
-    padding: 16px;
+#eg {
+    --mdc-theme-secondary: #FF0000;
 }
 
 a {
@@ -15,7 +15,7 @@ a {
 .theme-dark {
     --mdc-theme-primary: #000000;
     --mdc-theme-on-primary: #FFFFFF;
-    --mdc-theme-secondary: #FF0000;
+    --mdc-theme-secondary: #FD5B78;
     /*--mdc-theme-on-secondary: #5E97F6;*/
     color: #FFFFFF;
     background-color: var(--mdc-theme-primary);
@@ -27,12 +27,12 @@ a {
 .theme-light {
     --mdc-theme-primary: #FFFFFF;
     --mdc-theme-on-primary: #000000;
-    --mdc-theme-secondary: #FF0000;
+    --mdc-theme-secondary: ##5E97F6;
     /*--mdc-theme-on-secondary: #5E97F6;*/
     color: #000000;
     background-color: var(--mdc-theme-primary);
     --background-col-lin: #FFFFFF;
-    --accent: #5E97F6
+    --accent: #5E97F6;
 }
 
 svg {
@@ -47,14 +47,17 @@ svg {
     background-color: var(--background-col-lin);
 }
 
-.mdc-card {
-    margin: 8px;
-    width: 250px;
-    height: 220px;
-}
-
 .mdc-linear-progress {
     width: 75vw
+}
+
+.mdc-chip-set a {
+    text-decoration: none;
+}
+
+.theme-dark .mdc-chip {
+    background-color: #454545;
+    color: #EDFFFFFF;
 }
 
 .skill-entry-achievement .mdc-linear-progress {
@@ -62,13 +65,15 @@ svg {
 }
 
 .skill-title {
-    display: inline;
+    width: 60vw;
 }
 
 .skill-entry {
     padding-top: 16px;
 }
+
 /*FAB-THEME*/
+
 .fab-theme {
     --mdc-theme-secondary: var(--mdc-theme-primary);
     --mdc-theme-on-secondary: var(--accent)

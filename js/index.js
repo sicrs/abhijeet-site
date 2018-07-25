@@ -20,6 +20,7 @@ function loadMDC() {
         delay: 1500,
         duration: 3000,
     })
+
     const determinates = document.querySelectorAll('.mdc-linear-progress');
     for (let i = 0, determinate; determinate = determinates[i]; i++) {
         const linearprogress = new mdc.linearProgress.MDCLinearProgress(determinate);
@@ -50,8 +51,9 @@ function loadMDC() {
         }
     })
     
-    
-    var fabs = document.querySelectorAll('.mdc-fab');
+    mdc.chips.MDCChipSet.attachTo(document.querySelector('.mdc-chip-set'));
+
+    const fabs = document.querySelectorAll('.mdc-fab');
     for (var i = 0, fab; fab = fabs[i]; i++) {
         mdc.ripple.MDCRipple.attachTo(fab);
     };
@@ -59,71 +61,26 @@ function loadMDC() {
     mdc.autoInit();
 }
 
-
-
 function toggle() {
     let fabVisible = false;
     const bTrain = document.getElementById("eg");
-    if (fabVisible === false) {
+    if (bTrain.classList.contains("invisible")) {
         bTrain.classList.remove("invisible");
-        fabVisible = true;
         bTrain.href = 'https://youtu.be/5YJgBfGeXPg'
     } else {
-        //check 
-        if (bTrain.classList.contains("invisible")) {
-            bTrain.classList.remove("invisible");
-        } else {
-            return;
-        };
-        
+        return;
     };
 };
-
 
 function toggleTheme() {
     const bodyEl = document.body
     if (bodyEl.classList.contains("theme-dark")) {
         bodyEl.classList.remove("theme-dark");
         bodyEl.classList.add("theme-light");
+        document.querySelector('meta[name="theme-color"]').setAttribute("content", "#FFFFFF");
     } else {
         bodyEl.classList.add("theme-dark");
         bodyEl.classList.remove("theme-light");
+        document.querySelector('meta[name="theme-color"]').setAttribute("content", "#000000");
     }
-
-    
 }
-
- /*
-//scrollTO
-document.getElementsByTagName('no')[0].onclick = function () {
-    scrollTo(document.body, 0, 1250);   
- }
-     
- function scrollTo(element, to, duration) {
-     var start = element.scrollTop,
-         change = to - start,
-         currentTime = 0,
-         increment = 20;
-         
-     var animateScroll = function(){        
-         currentTime += increment;
-         var val = Math.easeInOutQuad(currentTime, start, change, duration);
-         element.scrollTop = val;
-         if(currentTime < duration) {
-             setTimeout(animateScroll, increment);
-         }
-     };
-     animateScroll();
- }
- 
- //t = current time
- //b = start value
- //c = change in value
- //d = duration
- Math.easeInOutQuad = function (t, b, c, d) {
-   t /= d/2;
-     if (t < 1) return c/2*t*t + b;
-     t--;
-     return -c/2 * (t*(t-2) - 1) + b;
- };
- */
