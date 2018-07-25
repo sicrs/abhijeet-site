@@ -72,6 +72,13 @@ svg {
     padding-top: 16px;
 }
 
+.footer {
+    padding: 16px;
+}
+
+.theme-light .footer {
+    background-color: #EEEEEE;
+}
 /*FAB-THEME*/
 
 .fab-theme {
