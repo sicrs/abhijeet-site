@@ -23,15 +23,6 @@
 }
 
 /*TOP_APP_BAR*/
-
-.mdc-top-app-bar__action-item {
-    --mdc-theme-on-primary: var(--mdc-theme-secondary);
-}
-
-.mdc-icon-button svg {
-    color: var(--mdc-theme-secondary);
-}
-
 #eg {
     --mdc-theme-secondary: #FF0000;
 }
@@ -46,7 +37,7 @@ a {
     font-size: 16px;
 }
 
-svg {
+.mdc-fab__icon svg {
     color: var(--mdc-theme-on-secondary);
 }
 
