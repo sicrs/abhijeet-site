@@ -8,10 +8,9 @@ const percentageVal = {
 function loadMDC() {
     const b = baffle('.title', {characters: 'sargibbathtrainoof', speed: 90}).start().once().reveal(500, 500);
     const typed = new Typed(".desc", {
-        strings: ["Public Relations", "Student", "Moderator", "Memer", "Shitposter"],
-        typeSpeed: 20,
+        strings: ["Public Realtions ^300/  Student ^300/ Moderator ^300/ Memer ^300/ Shitposter"],
+        typeSpeed: 10,
         startDelay: 1000,
-        loop: true,
         showCursor: false
     });
     anime({
@@ -51,6 +50,8 @@ function loadMDC() {
         }
     })
     
+    mdc.topAppBar.MDCTopAppBar.attachTo(document.querySelector('.mdc-top-app-bar'));
+
     mdc.chips.MDCChipSet.attachTo(document.querySelector('.mdc-chip-set'));
 
     const fabs = document.querySelectorAll('.mdc-fab');

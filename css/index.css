@@ -1,17 +1,4 @@
-#eg {
-    --mdc-theme-secondary: #FF0000;
-}
-
-a {
-    text-decoration: underline;
-    color: var(--mdc-theme-on-primary);
-    font-weight: 300;
-}
-
-.section-title {
-    font-size: 16px;
-}
-
+/*THEMES*/
 .theme-dark {
     --mdc-theme-primary: #000000;
     --mdc-theme-on-primary: #FFFFFF;
@@ -27,12 +14,36 @@ a {
 .theme-light {
     --mdc-theme-primary: #FFFFFF;
     --mdc-theme-on-primary: #000000;
-    --mdc-theme-secondary: ##5E97F6;
+    --mdc-theme-secondary: #5E97F6;
     /*--mdc-theme-on-secondary: #5E97F6;*/
     color: #000000;
     background-color: var(--mdc-theme-primary);
     --background-col-lin: #FFFFFF;
     --accent: #5E97F6;
+}
+
+/*TOP_APP_BAR*/
+
+.mdc-top-app-bar__action-item {
+    --mdc-theme-on-primary: var(--mdc-theme-secondary);
+}
+
+.mdc-icon-button svg {
+    color: var(--mdc-theme-secondary);
+}
+
+#eg {
+    --mdc-theme-secondary: #FF0000;
+}
+
+a {
+    text-decoration: underline;
+    color: var(--mdc-theme-on-primary);
+    font-weight: 300;
+}
+
+.section-title {
+    font-size: 16px;
 }
 
 svg {
@@ -65,7 +76,13 @@ svg {
 }
 
 .skill-title {
-    width: 60vw;
+    width: 20vw;
+}
+
+@media only screen and (max-width: 992px) {
+    .skill-title {
+        width: 65vw;
+    }
 }
 
 .skill-entry {
