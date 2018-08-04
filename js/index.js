@@ -8,7 +8,7 @@ const percentageVal = {
 function loadMDC() {
     const b = baffle('.title', {characters: 'sargibbathtrainoof', speed: 90}).start().once().reveal(500, 500);
     const typed = new Typed(".desc", {
-        strings: ["Public Realtions ^300/  Student ^300/ Moderator ^300/ Memer ^300/ Shitposter"],
+        strings: ["Public Relations ^300/  Student ^300/ Moderator ^300/ Memer ^300/ Shitposter"],
         typeSpeed: 10,
         startDelay: 1000,
         showCursor: false
