@@ -59,7 +59,20 @@ function loadMDC() {
         mdc.ripple.MDCRipple.attachTo(fab);
     };
 
-    mdc.autoInit();
+    const timeline = new anime.timeline({
+        targets: '.scroll-icon',
+        loop: true,
+        duration: 1000
+    })
+
+    timeline.add({
+        translateY: -20,
+    })
+    .add({
+        opacity: 0
+    })
+    
+    
 }
 
 function toggle() {

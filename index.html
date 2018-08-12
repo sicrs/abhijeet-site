@@ -18,7 +18,7 @@
         <header class="mdc-top-app-bar">
             <div class="mdc-top-app-bar__row">
                 <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
-                    <button class="mdc-top-app-bar__action-item" onmousedown="toggleTheme()">
+                    <button class="mdc-top-app-bar__action-item" onmousedown="toggleTheme()" data-mdc-ripple-is-unbounded>
                         <svg class="">
                             <g id="Bounding_Boxes">
                                 <g id="ui_x5F_spec_x5F_header_copy_3"></g>
@@ -38,12 +38,12 @@
         <main class="" style="padding: 8px;"> <!--height of top-app-bar = 64px-->
             <div id="opening" style="padding: 8px; height: 100vh; text-align: center;">
                 <div style="padding-top: 35vh; height: 15vh">
-                    <h1 class="mdc-typography--overline title" style="font-size: 28px;" onmousedown="toggle()">Abhijeet Bohra</h1>
+                    <h1 class="mdc-typography--overline title" style="font-size: 2em;" onmousedown="toggle()">Abhijeet Bohra</h1>
                 
-                    <span class="mdc-typography--overline desc" style="font-size: 14px;"></span>
+                    <span class="mdc-typography--overline desc" style="font-size: 1em;"></span>
                     
                 </div>
-                <div id="fab" style="padding-top: 5vh;">
+                <div id="fab" style="padding-top: 8vh;">
                     <a class="mdc-fab mdc-fab--extended mdc-ripple-surface--accent invisible" id="eg" aria-label="Favorite">
                         <svg class="mdc-fab__icon">
                             <g id="Bounding_Boxes">
@@ -59,7 +59,11 @@
                         <span class="mdc-fab__label">Bath Train</span>
                     </a>
                 </div>
+                
+                <span class="material-icons scroll-icon" style="padding-top: 18vh">expand_less</span>
+                
             </div>
+            
             
             <div>
                 <div style="padding: 16px;">
