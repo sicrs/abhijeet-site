@@ -27,7 +27,7 @@
     --mdc-theme-secondary: #FF0000;
 }
 
-a {
+.container a {
     text-decoration: underline;
     color: var(--mdc-theme-on-primary);
     font-weight: 300;
@@ -73,7 +73,7 @@ a {
 @media only screen and (max-width: 992px) {
     .skill-title {
         width: 65vw;
-    }
+    }    
 }
 
 .skill-entry {
