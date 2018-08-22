@@ -88,6 +88,10 @@
     padding: 16px;
 }
 
+.footer a {
+    color: var(--mdc-theme-on-primary);
+}
+
 .theme-light .footer {
     background-color: #EEEEEE;
 }
