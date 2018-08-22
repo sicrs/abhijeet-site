@@ -27,6 +27,10 @@
     --mdc-theme-secondary: #FF0000;
 }
 
+.mdc-top-app-bar__action-item.mdc-ripple-upgraded:hover::before {
+    opacity: 0;
+}
+
 .container a {
     text-decoration: underline;
     color: var(--mdc-theme-on-primary);
