@@ -1,5 +1,6 @@
 let origContent
 document.body.onload = () => {
+    document.body.style.setProperty("background-color", "#000000")
     loadMDC()
 }
 

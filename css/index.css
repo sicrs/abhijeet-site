@@ -5,7 +5,6 @@
     --mdc-theme-secondary: #6ED3FD;
     /*--mdc-theme-on-secondary: #5E97F6;*/
     color: #FFFFFF;
-    background-color: var(--mdc-theme-primary);
     --background-col-lin: #000000;
     --accent: #6ED3FD;
 }
