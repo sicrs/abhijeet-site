@@ -124,19 +124,22 @@ function toggleTheme() {
             targets: document.querySelectorAll('.animate'),
             backgroundColor: '#FFFFFF',
             duration: 2000,
-                    
+            complete: function(anim) {
+                bodyEl.classList.remove("theme-dark");
+                bodyEl.classList.add("theme-light");
+            }
         })
-        bodyEl.classList.remove("theme-dark");
-        bodyEl.classList.add("theme-light");
+        
     } else {
         document.querySelector('meta[name="theme-color"]').setAttribute("content", "#000000");
         anime({
             targets: document.querySelectorAll('.animate'),
             backgroundColor: '#000000',
-            duration: 2000,         
+            duration: 2000,
+            complete: function(anim) {
+                bodyEl.classList.add("theme-dark");
+                bodyEl.classList.remove("theme-light");
+            }
         })
-        bodyEl.classList.add("theme-dark");
-        bodyEl.classList.remove("theme-light");
     }
-    
 }
