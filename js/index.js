@@ -124,7 +124,7 @@ function toggleTheme() {
             targets: document.querySelectorAll('.animate'),
             backgroundColor: '#FFFFFF',
             duration: 2000,
-            complete: function(anim) {
+            begin: function(anim) {
                 bodyEl.classList.remove("theme-dark");
                 bodyEl.classList.add("theme-light");
             }
@@ -136,7 +136,7 @@ function toggleTheme() {
             targets: document.querySelectorAll('.animate'),
             backgroundColor: '#000000',
             duration: 2000,
-            complete: function(anim) {
+            begin: function(anim) {
                 bodyEl.classList.add("theme-dark");
                 bodyEl.classList.remove("theme-light");
             }
