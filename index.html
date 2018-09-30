@@ -9,14 +9,17 @@
         <link rel="stylesheet" type="text/css" media="screen" href="css/material-components-web.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="css/index.css" />
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link rel="stylesheet" href="https://s3.amazonaws.com/icomoon.io/114779/Socicon/style.css?9ukd8d">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
         <script src="js/anime.min.js"></script>
         
     </head>
 
-    <body class="mdc-typography theme-dark" style="margin: 0px;" onload="loadMDC()">
-        <header class="mdc-top-app-bar">
+    <body class="mdc-typography theme-dark animate" style="margin: 0px;">
+        <header class="mdc-top-app-bar mdc-top-app-bar--fixed animate">
             <div class="mdc-top-app-bar__row">
+                <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                    <span class="mdc-top-app-bar__title" style="font-family: 'Roboto Mono'">abhijeet</span>
+                </section>
                 <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
                     <span class="mdc-top-app-bar__action-item" onmousedown="toggleTheme()" aria-label="Theme">
                         <i class="material-icons">compare</i>
@@ -25,7 +28,7 @@
             </div>
         </header>
 
-        <main class="" style="padding: 8px;"> <!--height of top-app-bar = 64px-->
+        <main class="main-container" style="padding: 8px;"> <!--height of top-app-bar = 64px-->
             <div id="opening" style="padding: 8px; height: 100vh; text-align: center;">
                 <div style="padding-top: 35vh; height: 15vh">
                     <h1 class="mdc-typography--overline title" style="font-size: 2em;" onmousedown="toggle()">Abhijeet Bohra</h1>
@@ -60,10 +63,10 @@
                     <h1 class="mdc-typography--overline section-title">About me</h1>
                 </div>
                 <div style="padding: 16px; padding-top: 0px;">
-                    <h1 class="mdc-typography--headline2" style="margin-top: 0px;">My name is Abhijeet.</h1>
+                    <h1 style="margin-top: 0px; font-family: 'Roboto Mono'; font-weight: 300">My name is Abhijeet.</h1>
                     <h2 class="mdc-typography--subtitle1" style="font-weight: 350">
                         I'm a 20 year-old student from Mumbai who manages Public Relations @ <a href="https://prjkt.io">PRJKT Development LLC</a> and <a href="https://lawnchair.app">Lawnchair Launcher</a>.<br>
-                        Other than that, I'm also a member of the <a href="https://christopherkardas.me">CK Team</a> as well as a full-time memer.
+                        Other than that, I'm also a member of the <a href="https://christopherkardas.me">CK Team</a> as well as a full-time memer and hobby photographer.
                     </h2>
                     <h3 class="mdc-typography--subtitle2">Drop a line. Or a meme ¯\_(ツ)_/¯</h3>
                     <div class="mdc-chip-set" style="padding: 0px;">

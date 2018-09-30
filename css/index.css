@@ -12,14 +12,18 @@
 
 
 .theme-light {
-    --mdc-theme-primary: #FFFFFF;
+    --mdc-theme-primary: #EEEEEE;
     --mdc-theme-on-primary: #000000;
     --mdc-theme-secondary: #5E97F6;
     /*--mdc-theme-on-secondary: #5E97F6;*/
     color: #000000;
-    background-color: var(--mdc-theme-primary);
+    /*background-color: var(--mdc-theme-primary);*/
     --background-col-lin: #FFFFFF;
     --accent: #5E97F6;
+}
+/*The color white is hardcoded i the mdc-web css :(*/
+.mdc-top-app-bar__title {
+    color: var(--accent);
 }
 
 /*TOP_APP_BAR*/

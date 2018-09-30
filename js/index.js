@@ -1,8 +1,17 @@
+let origContent
+document.body.onload = () => {
+    loadMDC()
+}
+
 const percentageVal = {
     shitposting: '0%',
     memeing: '0%',
     photoshop: '0%',
-    achievement: '0%'
+    achievement: '0%',
+    shitpostingVal: 0,
+    memeingVal: 0,
+    photoshopVal: 0,
+    achievementVal: 0
 } 
 
 function loadMDC() {
@@ -24,13 +33,13 @@ function loadMDC() {
     for (let i = 0, determinate; determinate = determinates[i]; i++) {
         const linearprogress = new mdc.linearProgress.MDCLinearProgress(determinate);
         if (i === 0) {
-            linearprogress.progress = 0.75;
+            linearprogress.foundation_.setProgress(0);
         } else if (i === 1) {
-            linearprogress.progress = 1;
+            linearprogress.progress = 0;
         } else if (i === 2) {
-            linearprogress.progress = 0.7;
+            linearprogress.progress = 0;
         } else if (i === 3) {
-            linearprogress.progress = 1;
+            linearprogress.progress = 0;
         };
     };
     
@@ -41,12 +50,29 @@ function loadMDC() {
         photoshop: '70%',
         achievement: '110%',
         easing: 'linear',
+        shitpostingVal: 0.75,
+        memeingVal: 1,
+        photoshopVal: 0.7,
+        achievementVal: 1.1,
         round: 1,
         update: function(anim) {
-            document.querySelector('.shitposting').innerHTML = percentageVal.shitposting
+            const determinates = document.querySelectorAll('.mdc-linear-progress');
+            for (let i = 0, determinate; determinate = determinates[i]; i++) {
+                const linearprogress = new mdc.linearProgress.MDCLinearProgress(determinate);
+                if (i === 0) {
+                    linearprogress.foundation_.setProgress(percentageVal.shitpostingVal);
+                } else if (i === 1) {
+                    linearprogress.foundation_.setProgress(percentageVal.memeingVal);
+                } else if (i === 2) {
+                    linearprogress.foundation_.setProgress(percentageVal.photoshopVal);
+                } else if (i === 3) {
+                    linearprogress.foundation_.setProgress(percentageVal.achievementVal);
+                };
+            document.querySelector('.shitposting').innerHTML = percentageVal.shitposting 
             document.querySelector('.memeing').innerHTML = percentageVal.memeing
             document.querySelector('.photoshop').innerHTML = percentageVal.photoshop
             document.querySelector('.achievement').innerHTML = percentageVal.achievement
+            }
         }
     })
     
@@ -72,7 +98,6 @@ function loadMDC() {
         opacity: 0
     })
     
-    
 }
 
 function toggle() {
@@ -86,15 +111,32 @@ function toggle() {
     };
 };
 
+function changeProperty(el, property, change) {
+    const element = document.querySelector(el);
+    element.style.setProperty(property, change)
+}
+
 function toggleTheme() {
     const bodyEl = document.body
     if (bodyEl.classList.contains("theme-dark")) {
+        document.querySelector('meta[name="theme-color"]').setAttribute("content", "#FFFFFF");
+        anime({
+            targets: document.querySelectorAll('.animate'),
+            backgroundColor: '#FFFFFF',
+            duration: 2000,
+                    
+        })
         bodyEl.classList.remove("theme-dark");
         bodyEl.classList.add("theme-light");
-        document.querySelector('meta[name="theme-color"]').setAttribute("content", "#FFFFFF");
     } else {
+        document.querySelector('meta[name="theme-color"]').setAttribute("content", "#000000");
+        anime({
+            targets: document.querySelectorAll('.animate'),
+            backgroundColor: '#000000',
+            duration: 2000,         
+        })
         bodyEl.classList.add("theme-dark");
         bodyEl.classList.remove("theme-light");
-        document.querySelector('meta[name="theme-color"]').setAttribute("content", "#000000");
     }
+    
 }
