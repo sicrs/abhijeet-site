@@ -3,7 +3,6 @@
     --mdc-theme-primary: #000000;
     --mdc-theme-on-primary: #FFFFFF;
     --mdc-theme-secondary: #6ED3FD;
-    /*--mdc-theme-on-secondary: #5E97F6;*/
     color: #FFFFFF;
     --background-col-lin: #000000;
     --accent: #6ED3FD;
@@ -11,25 +10,24 @@
 
 
 .theme-light {
-    --mdc-theme-primary: #EEEEEE;
+    --mdc-theme-primary: #FFFFFF;
     --mdc-theme-on-primary: #000000;
     --mdc-theme-secondary: #5E97F6;
-    /*--mdc-theme-on-secondary: #5E97F6;*/
     color: #000000;
-    /*background-color: var(--mdc-theme-primary);*/
     --background-col-lin: #FFFFFF;
     --accent: #5E97F6;
 }
-/*The color white is hardcoded i the mdc-web css :(*/
+
+/*The color white is hardcoded in the mdc-web css :(*/
 .mdc-top-app-bar__title {
     color: var(--accent);
 }
 
-/*TOP_APP_BAR*/
 #eg {
     --mdc-theme-secondary: #FF0000;
 }
 
+/*TOP_APP_BAR*/
 .mdc-top-app-bar__action-item.mdc-ripple-upgraded:hover::before {
     opacity: 0;
 }
@@ -53,7 +51,7 @@
 }
 
 .mdc-linear-progress__buffer {
-    background-color: var(--background-col-lin);
+    background-color: var(--mdc-theme-primary);
 }
 
 .mdc-linear-progress {
@@ -87,6 +85,8 @@
     padding-top: 16px;
 }
 
+/*FOOTER*/
+
 .footer {
     padding: 16px;
 }
@@ -98,6 +98,7 @@
 .theme-light .footer {
     background-color: #EEEEEE;
 }
+
 /*FAB-THEME*/
 
 .fab-theme {
