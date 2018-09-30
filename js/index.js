@@ -1,6 +1,4 @@
-let origContent
 document.body.onload = () => {
-    document.body.style.setProperty("background-color", "#000000")
     loadMDC()
 }
 
@@ -130,7 +128,6 @@ function toggleTheme() {
                 bodyEl.classList.add("theme-light");
             }
         })
-        
     } else {
         document.querySelector('meta[name="theme-color"]').setAttribute("content", "#000000");
         anime({
