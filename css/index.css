@@ -17,6 +17,7 @@
 body {
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
 }
 /*The color white is hardcoded in the mdc-web css :(*/
 .mdc-top-app-bar__title {
