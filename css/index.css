@@ -4,8 +4,6 @@
     --mdc-theme-on-primary: #FFFFFF;
     --mdc-theme-secondary: #6ED3FD;
     color: #FFFFFF;
-    --background-col-lin: #000000;
-    --accent: #6ED3FD;
 }
 
 
@@ -14,13 +12,19 @@
     --mdc-theme-on-primary: #000000;
     --mdc-theme-secondary: #5E97F6;
     color: #000000;
-    --background-col-lin: #FFFFFF;
-    --accent: #5E97F6;
 }
 
+body {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
 /*The color white is hardcoded in the mdc-web css :(*/
 .mdc-top-app-bar__title {
-    color: var(--accent);
+    color: var(--mdc-theme-secondary);
+}
+
+.section-title::after {
+    content: "\AC"
 }
 
 #eg {
@@ -47,7 +51,7 @@
 }
 
 .mdc-linear-progress {
-    --mdc-theme-primary: var(--accent);
+    --mdc-theme-primary: var(--mdc-theme-secondary);
 }
 
 .mdc-linear-progress__buffer {
@@ -94,18 +98,11 @@
 .footer a {
     color: var(--mdc-theme-on-primary);
 }
-
+/*
 .theme-light .footer {
     background-color: #EEEEEE;
 }
-
-/*FAB-THEME*/
-
-.fab-theme {
-    --mdc-theme-secondary: var(--mdc-theme-primary);
-    --mdc-theme-on-secondary: var(--accent)
-}
-
+*/
 .mdc-fab {
     margin: 8px;
 }

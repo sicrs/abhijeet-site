@@ -2,6 +2,34 @@ document.body.onload = () => {
     loadMDC()
 }
 
+//Theme-toggle function
+function toggleTheme() {
+    const bodyEl = document.body
+    if (bodyEl.classList.contains("theme-dark")) {
+        document.querySelector('meta[name="theme-color"]').setAttribute("content", "#FFFFFF");
+        anime({
+            targets: document.querySelectorAll('.animate'),
+            backgroundColor: '#FFFFFF',
+            duration: 2000,
+            run: function(anim) {
+                bodyEl.classList.remove("theme-dark");
+                bodyEl.classList.add("theme-light");
+            }
+        })
+    } else {
+        document.querySelector('meta[name="theme-color"]').setAttribute("content", "#000000");
+        anime({
+            targets: document.querySelectorAll('.animate'),
+            backgroundColor: '#000000',
+            duration: 2000,
+            run: function(anim) {
+                bodyEl.classList.add("theme-dark");
+                bodyEl.classList.remove("theme-light");
+            }
+        })
+    }
+}
+
 const percentageVal = {
     shitposting: '0%',
     memeing: '0%',
@@ -21,13 +49,7 @@ function loadMDC() {
         startDelay: 1000,
         showCursor: false
     });
-    anime({
-        targets: '.fab-theme',
-        opacity: 100,
-        delay: 1500,
-        duration: 3000,
-    })
-
+    
     const determinates = document.querySelectorAll('.mdc-linear-progress');
     for (let i = 0, determinate; determinate = determinates[i]; i++) {
         const linearprogress = new mdc.linearProgress.MDCLinearProgress(determinate);
@@ -79,17 +101,13 @@ function loadMDC() {
 
     mdc.chips.MDCChipSet.attachTo(document.querySelector('.mdc-chip-set'));
 
-    const fabs = document.querySelectorAll('.mdc-fab');
-    for (var i = 0, fab; fab = fabs[i]; i++) {
-        mdc.ripple.MDCRipple.attachTo(fab);
-    };
-
+    mdc.ripple.MDCRipple.attachTo(document.querySelector('.mdc-fab'));
+    
     const timeline = new anime.timeline({
         targets: '.scroll-icon',
         loop: true,
         duration: 1000
     })
-
     timeline.add({
         translateY: -20,
     })
@@ -100,7 +118,6 @@ function loadMDC() {
 }
 
 function toggle() {
-    let fabVisible = false;
     const bTrain = document.getElementById("eg");
     if (bTrain.classList.contains("invisible")) {
         bTrain.classList.remove("invisible");
@@ -110,34 +127,4 @@ function toggle() {
     };
 };
 
-function changeProperty(el, property, change) {
-    const element = document.querySelector(el);
-    element.style.setProperty(property, change)
-}
 
-function toggleTheme() {
-    const bodyEl = document.body
-    if (bodyEl.classList.contains("theme-dark")) {
-        document.querySelector('meta[name="theme-color"]').setAttribute("content", "#FFFFFF");
-        anime({
-            targets: document.querySelectorAll('.animate'),
-            backgroundColor: '#FFFFFF',
-            duration: 2000,
-            begin: function(anim) {
-                bodyEl.classList.remove("theme-dark");
-                bodyEl.classList.add("theme-light");
-            }
-        })
-    } else {
-        document.querySelector('meta[name="theme-color"]').setAttribute("content", "#000000");
-        anime({
-            targets: document.querySelectorAll('.animate'),
-            backgroundColor: '#000000',
-            duration: 2000,
-            begin: function(anim) {
-                bodyEl.classList.add("theme-dark");
-                bodyEl.classList.remove("theme-light");
-            }
-        })
-    }
-}
